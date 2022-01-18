@@ -3,7 +3,7 @@ name: "멋쟁이사자처럼 10기 Issue Template\U0001F981"
 about: "멋쟁이 사자처럼 10기 과제 이슈 템플릿입니다\U0001F981"
 title: "[FEAT] 멋사 N차 과제\U0001F981"
 labels: "과제\U0001F981, 운영진"
-assignees: hellozo0
+assignees: ''
 
 ---
 
