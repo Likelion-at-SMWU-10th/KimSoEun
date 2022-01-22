@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>미니 스타크래프트</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="hp">HP : 3</h1>
+        <div class='background'>
+            <img id='drone' src="drone.png" alt="drone">
+            <img id='spit' src="spit.png" alt="spit">
+            <img id='bunker' src="bunker.png" alt="bunker">
+        </div>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+        <script>
+            var hp = 3;
+            //드론을 클릭했을 때 침 발사
+            $('#drone').click(function () {
+                $('#spit').fadeIn();    //코딩은 구글링~.~ (구글링 키워드: jQuery 나타내기)
+                $('#spit').animate({left: '+=250px'});    
+                $('#spit').fadeOut(function() { //fadeOut() 안에 콜백함수를 넣어줌 -> fadeOut이 실행된 후에 순차적으로 다음 코드를 실행하기 위해
+                    //hp 감소
+                    hp = hp - 1;
+                    $('#hp').text('HP : ' + hp);
+                    //hp가 0이면 벙커 없앰
+                    if (hp == 0) {
+                        $('#bunker').fadeOut();
+                    }
+                });
+                $('#spit').css({left: '150px'});    
+            });
+        </script>
+    </body>
+</html>
