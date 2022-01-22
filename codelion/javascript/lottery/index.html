@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>로또 번호 추첨기</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>로또 번호 추첨기</h1>
+        <script>
+            var lotto = [];
+            //6개의 1~45 사이 랜덤 정수 배열에 넣기
+            while (lotto.length < 6){
+                var num = parseInt(Math.random() * 45 + 1);   //Math.random(): 0 이상 1 미만의 난수 값을 생성 (1을 포함하지 않음!)
+                if (lotto.indexOf(num) == -1) { //indexOf(): 해당 값의 인덱스 반환 (없으면 -1)
+                    lotto.push(num);
+                }
+            }
+            lotto.sort((a,b)=>a-b); //(a,b)=>a-b: 숫자로 정렬하기 위해 기준함수 설정(디폴트는 사전순)
+            document.write("<div class='ball ball1'>" + lotto[0] + "</div>");
+            document.write("<div class='ball ball2'>" + lotto[1] + "</div>");
+            document.write("<div class='ball ball3'>" + lotto[2] + "</div>");
+            document.write("<div class='ball ball4'>" + lotto[3] + "</div>");
+            document.write("<div class='ball ball5'>" + lotto[4] + "</div>");
+            document.write("<div class='ball ball6'>" + lotto[5] + "</div>");
+        </script>
+    </body>
+</html>
