@@ -1,7 +1,7 @@
 import random
 import time
 
-lunch = ["된장찌개", "피자", "제육볶음", "짜장면"]
+lunch = ["된장찌개", "피자", "제육볶음", "짜장면", "김치볶음밥"]
 
 # 메뉴 추가
 while True:
