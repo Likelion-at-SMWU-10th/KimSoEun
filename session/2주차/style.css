@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&family=Hi+Melody&display=swap');
+
 body, h1, h2 {
     margin: 0px;
     padding: 0px;
+    font-family: 'Hi Melody', cursive;
 }
 
 body {
